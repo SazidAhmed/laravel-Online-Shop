@@ -4,14 +4,12 @@
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
                 <!-- User profile -->
-                <div class="user-profile" style="background: url(assets/images/background/user-info.jpg) no-repeat;">
+                <div class="user-profile" style="background: url({{ URL::asset('assets/images/background/user-info.jpg') }})">
                     <!-- User profile image -->
                     <div class="profile-img"> <img src="{{ asset('assets/images/users/profile.png')}}" alt="user" /> </div>
                     <!-- User profile text-->
                     <div class="profile-text"> <a href="{{ route('dashboard.index') }}">{{Auth()->user()->name}}</a></div>
                 </div>
-               
-               
                 <!-- End User profile text-->
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
@@ -19,31 +17,33 @@
                         <li class="nav-small-cap">Dashboard</li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="{{ route('dashboard.index') }}">Dashboard</a></li>
+                                <li><a  href="{{ route('dashboard.index') }}">Dashboard</a></li>
+                                <li><a href="{{ route('slider.index') }}">Home Page Slider</a></li>
                             </ul>
                         </li>
+
                         <li class="nav-devider"></li>
                         <li class="nav-small-cap">User Management</li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Users</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="#">Users</a></li>
+                                <li><a href="{{ route('users.index') }}">Users</a></li>
                             </ul>
                         </li>
+
                         <li class="nav-devider"></li>
                         <li class="nav-small-cap">Product Management</li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Products</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="{{ route('category.index') }}">Category</a></li>
                                 <li><a href="{{ route('product.index') }}">Products</a></li>
-                                <li><a href="{{ route('slider.index') }}">Slider Image</a></li>
                             </ul>
                         </li>
+
                         <li class="nav-devider"></li>
                         <li class="nav-small-cap">Sales Management</li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Customer & Order </span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="#">Customer</a></li>
-                                <li><a href="#">Order</a></li>
+                                <li><a href="{{ URL('allOrder') }}">Customers & Orders</a></li>
                             </ul>
                         </li>
                         

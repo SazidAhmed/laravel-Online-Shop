@@ -33,10 +33,9 @@
     <!-- order -->
     <div class="col-lg-8 col-xlg-8 col-md-12">
       <div class="ribbon-wrapper card">
-        <div class="ribbon ribbon-bookmark ribbon-danger">User List</div>
+        <div class="ribbon ribbon-bookmark ribbon-danger">Customer & Orders</div>
         <div class="card-body">
            <!-- Create modal -->
-           <button type="button" class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#addModalpro">Add New</button>
           <div class="align-self-center">
             <table class="table table-responsive">
               <thead>
